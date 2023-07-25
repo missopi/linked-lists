@@ -8,10 +8,13 @@ class LinkedList
 
   # add new node to end
   def append(value)
+    tail.next = Node.new(value)
+    end
   end
 
-  # add new node to begginning
+  # add new node to beginning
   def prepend(value)
+    @head = Node.new(value)
   end
 
   # total number of nodes
