@@ -8,7 +8,7 @@ class LinkedList
 
   # add new node to end
   def append(value)
-    tail.next = Node.new(value)
+    tail.next_node = Node.new(value)
   end
 
   # add new node to beginning
@@ -37,11 +37,13 @@ class LinkedList
   end
 
   # remove last element
-  def pop 
+  def pop
+    tail.delete
   end
 
   # returns true if value in list
   def contains?(value)
+    return true if node(value) == value
   end
 
   # returns index of node containing value
