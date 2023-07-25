@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 # will represent the full list
-class LinkedList < Node
+class LinkedList
+  def initialise
+    @head = nil
+  end
+
   # add new node to end
   def append(value)
   end
@@ -45,6 +49,9 @@ end
 
 # represents a node in the linked list containing the value and the link to the next node
 class Node
+  attr_accessor :next_node
+  attr_reader :value
+
   def initialise(value = nil, next_node = nil)
     @value = value
     @next_node = next_node
