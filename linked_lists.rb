@@ -30,7 +30,7 @@ class LinkedList
   # return last node
   def tail
     node = @head
-    return node unless node.next
+    return node unless node.next_node
   end
 
   # return node at given index
