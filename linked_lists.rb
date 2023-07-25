@@ -23,10 +23,14 @@ class LinkedList
 
   # returns first node
   def head
+    node = @head
+    return node if node.first
   end
 
   # return last node
   def tail
+    node = @head
+    return node unless node.next
   end
 
   # return node at given index
