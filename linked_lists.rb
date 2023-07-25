@@ -9,7 +9,6 @@ class LinkedList
   # add new node to end
   def append(value)
     tail.next = Node.new(value)
-    end
   end
 
   # add new node to beginning
