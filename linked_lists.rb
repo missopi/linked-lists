@@ -106,7 +106,7 @@ class LinkedList
     index = 0
     found = false
     until node.nil? || found
-      if value == node.value 
+      if value == node.value
         found = true
         index
       else
@@ -142,3 +142,20 @@ class Node
     @next_node = nil
   end
 end
+
+test = LinkedList.new
+test.append('value1')
+test.append('value2')
+test.append('value3')
+p test.to_s
+test.prepend('value4')
+test.prepend('value5')
+p test.to_s
+p test.pop
+p test.to_s
+p test.contains?('value2')
+p test.find('value1')
+p test.head
+p test.tail
+p test.at(1)
+p test.size
