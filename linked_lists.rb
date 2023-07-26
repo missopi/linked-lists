@@ -104,14 +104,9 @@ class LinkedList
   def find(value)
     node = @head
     index = 0
-    found = false
-    until node.nil? || found
-      if value == node.value
-        found = true
-      else
-        node = node.next_node
-        index += 1
-      end
+    until node.nil? || value == node.value
+      node = node.next_node
+      index += 1
     end
     index
   end
