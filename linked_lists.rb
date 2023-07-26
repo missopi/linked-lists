@@ -90,8 +90,12 @@ class LinkedList
   def contains?(value)
     node = @head
     found = false
-    if node.value == value
-      found = true
+    until node.nil? || found
+      if node.value == value
+        found = true
+      else
+        node = node.next_node
+      end
     end
     found
   end
