@@ -108,7 +108,6 @@ class LinkedList
     until node.nil? || found
       if value == node.value
         found = true
-        index
       else
         node = node.next_node
         index += 1
