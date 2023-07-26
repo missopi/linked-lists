@@ -57,13 +57,13 @@ class LinkedList
     node.value if node.next_node.nil?
   end
 
-  # return node at given index
+  # return node value at given index
   def at(index)
     node = @head
     index.times do
       node = node.next_node
     end
-    node
+    node.value
   end
 
   # remove last element
