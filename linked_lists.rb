@@ -119,12 +119,16 @@ class LinkedList
 
   # list of values represented as string
   def to_s
+    'nil' if @head.nil?
+
     node = @head
+    list = ''
     until node.nil?
-      puts "#{node.node}"
+      list += "#{node.value} -> "
       node = node.next_node
     end
-    puts 'end'
+
+    "#{list}nil"
   end
 end
 
