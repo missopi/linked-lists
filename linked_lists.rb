@@ -52,7 +52,7 @@ class LinkedList
     @head.value
   end
 
-  # return last node
+  # return value of last node
   def tail
     node = @head
     return node unless node.next_node
