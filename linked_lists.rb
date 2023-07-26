@@ -8,7 +8,15 @@ class LinkedList
 
   # add new node to end
   def append(value)
-    tail.next_node = Node.new(value)
+    new_node = Node.new(value)
+
+    if @head.nil?
+      @head = new_node
+    else
+      current = @head
+      current = current.next_node while current.next_node
+      current.next_node = current
+    end
   end
 
   # add new node to beginning
