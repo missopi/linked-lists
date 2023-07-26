@@ -102,7 +102,19 @@ class LinkedList
 
   # returns index of node containing value
   def find(value)
-    return index if node.value == value
+    node = @head
+    index = 0
+    found = false
+    until node.nil? || found
+      if value == node.value 
+        found = true
+        index
+      else
+        node = node.next_node
+        index += 1
+      end
+    end
+    index
   end
 
   # list of values represented as string
