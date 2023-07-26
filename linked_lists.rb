@@ -53,8 +53,9 @@ class LinkedList
 
   # return value of last node
   def tail
-    node = @head
-    node.value if node.next_node.nil?
+    @head.value if @head.nil?
+
+    
   end
 
   # return node value at given index
