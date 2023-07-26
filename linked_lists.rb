@@ -2,7 +2,7 @@
 
 # will represent the full list
 class LinkedList
-  def initialise
+  def initialize
     @head = nil
   end
 
@@ -57,6 +57,7 @@ class LinkedList
 
   # returns index of node containing value
   def find(value)
+    return index if node.value == value
   end
 
   # list of values represented as string
@@ -75,8 +76,8 @@ class Node
   attr_accessor :next_node
   attr_reader :value
 
-  def initialise(value = nil, next_node = nil)
+  def initialize(value = nil)
     @value = value
-    @next_node = next_node
+    @next_node = nil
   end
 end
