@@ -8,10 +8,10 @@ class LinkedList
 
   # add new node to end
   def append(value)
-    new_node = Node.new(value)
+    new_node = Node.new(value) # make new node
 
     if @head.nil?
-      @head = new_node
+      @head = new_node # if no nodes, first node is new node
     else
       current = @head
       current = current.next_node while current.next_node
@@ -35,8 +35,15 @@ class LinkedList
   # total number of nodes
   def size
     count = 0
-    node = @head
-    count += 1 until node.next_node.nil?
+    if @head.nil?
+      count = nil
+    else
+      node = @head
+      until node.next_node.nil?
+        count += 1
+        node = node.next_node
+      end
+    end
     count
   end
 
