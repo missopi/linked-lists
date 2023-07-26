@@ -21,7 +21,15 @@ class LinkedList
 
   # add new node to beginning
   def prepend(value)
-    @head = Node.new(value)
+    new_node = Node.new(value)
+
+    if @head.nil?
+      @head = new_node
+    else
+      current = @head
+      @head = new_node
+      @head.next_node = current
+    end
   end
 
   # total number of nodes
