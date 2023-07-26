@@ -48,18 +48,24 @@ class LinkedList
 
   # returns value of first node
   def head
+    return nil if @head.nil?
+
     @head.value
   end
 
   # return value of last node
   def tail
-    @head.value if @head.nil?
+    return nil if @head.nil?
 
-    
+    node = @head
+    node = node.next_node until node.next_node.nil?
+    node.value
   end
 
   # return node value at given index
   def at(index)
+    return nil if @head.nil?
+
     node = @head
     index.times do
       node = node.next_node
