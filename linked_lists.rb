@@ -75,7 +75,11 @@ class LinkedList
 
   # remove last element
   def pop
-    tail.delete
+    node = @head
+    return nil if node.nil?
+
+    node = node.next_node until node.next_node.nil?
+
   end
 
   # returns true if value in list
