@@ -78,8 +78,12 @@ class LinkedList
     node = @head
     return nil if node.nil?
 
-    node = node.next_node until node.next_node.nil?
-
+    until node.next_node.nil?
+      previous_node = node
+      node = node.next_node
+    end
+    previous_node.next_node = nil
+    previous_node
   end
 
   # returns true if value in list
