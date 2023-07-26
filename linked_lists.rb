@@ -88,7 +88,12 @@ class LinkedList
 
   # returns true if value in list
   def contains?(value)
-    return true if node.value == value
+    node = @head
+    found = false
+    if node.value == value
+      found = true
+    end
+    found
   end
 
   # returns index of node containing value
