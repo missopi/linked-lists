@@ -47,10 +47,9 @@ class LinkedList
     count
   end
 
-  # returns first node
+  # returns value of first node
   def head
-    node = @head
-    return node if node.first
+    @head.value
   end
 
   # return last node
