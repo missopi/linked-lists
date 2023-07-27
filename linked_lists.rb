@@ -168,3 +168,5 @@ p test.head
 p test.tail
 p test.at(1)
 p test.size
+test.remove_at(1)
+p test.to_s
