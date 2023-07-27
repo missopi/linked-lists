@@ -86,6 +86,13 @@ class LinkedList
     previous_node
   end
 
+  # remove value at given index
+  def remove_at(index)
+    return nil if @head.nil?
+
+    
+  end
+
   # returns true if value in list
   def contains?(value)
     node = @head
