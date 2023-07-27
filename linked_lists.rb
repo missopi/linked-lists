@@ -89,7 +89,12 @@ class LinkedList
   # remove value at given index
   def remove_at(index)
     return nil if @head.nil?
-
+    
+    if index.zero?
+      node = @head
+      @head = @head.next_node
+      node
+    end
     
   end
 
